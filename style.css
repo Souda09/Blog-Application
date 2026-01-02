@@ -1,0 +1,252 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make html and body full height */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Navbar fix height issues */
+.navbar {
+    z-index: 1000;
+}
+
+/* Slider images full screen */
+.carousel-item img {
+    width: 100vw;        /* Full screen width */
+    height: 100vh;       /* Full screen height */
+    object-fit: cover;   /* Cover the screen, crop if necessary */
+}
+
+/* Optional: Overlay text in center of slider */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+.slider-img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #2C3E50;
+    --accent-color: #3498db;
+    --warning-color: #ffc107;
+    --danger-color: #e74c3c;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+/* --- Carousel / Slider Styling --- */
+.carousel-item img {
+    height: 80vh; /* Screen ki 80% height */
+    object-fit: cover;
+    filter: brightness(0.6); /* Image ko thoda dark kiya takay button nazar aaye */
+}
+
+.slider-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.createBlogBtn {
+    padding: 15px 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.createBlogBtn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* --- Blog Cards Styling --- */
+#blogContainer .card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+#blogContainer .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+}
+
+#blogContainer .card-img-top {
+    transition: transform 0.5s ease;
+}
+
+#blogContainer .card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+#blogContainer .badge {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* --- Footer Custom Styling --- */
+footer {
+    background-color: #1a1a1a !important;
+    color: #bbb;
+}
+
+footer h5 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--warning-color);
+}
+
+footer a:hover {
+    color: var(--warning-color) !important;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Social Media Icons Animation */
+.list-inline-item a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.list-inline-item a:hover {
+    transform: translateY(-5px);
+    color: var(--warning-color) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 50vh;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+/* Navbar Styling */
+.navbar {
+    padding: 12px 0;
+    border-bottom: 2px solid #ffc107; /* Halka sa yellow border niche */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Button Hover Effects */
+.navbar .btn {
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.navbar .btn-danger:hover {
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive gap */
+@media (max-width: 991px) {
+    .ms-auto {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .ms-auto .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+

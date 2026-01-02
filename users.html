@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage Users - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">Admin Panel</a>
+        <div class="ms-auto">
+            <a href="dashboard.html" class="btn btn-outline-light btn-sm">Back to Blogs</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>User Management</h3>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">Add New User</button>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add User (Database Record)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="newUserName" class="form-control mb-2" placeholder="Full Name">
+                <input type="email" id="newUserEmail" class="form-control mb-2" placeholder="Email">
+                <select id="newUserRole" class="form-control mb-2">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <p class="text-danger small">*Note: User must signup with this email to access.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success w-100" id="saveUserBtn">Save User</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+ <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+      
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Bloggers</h5>
+        <p>Ek aisa platform jahan aap apne khayalat aur kahaniyan duniya ke saath share kar sakte hain. Likhte rahiye aur judte rahiye.</p>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+        <p><a href="index.html" class="text-white" style="text-decoration: none;">Home</a></p>
+        <p><a href="#" class="text-white" style="text-decoration: none;">About Us</a></p>
+        <p><a href="#" class="text-white" style="text-decoration: none;">Contact</a></p>
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+        <p><i class="fas fa-home me-2"></i> Karachi, Sindh, PK</p>
+        <p><i class="fas fa-envelope me-2"></i> info@bloggers.com</p>
+        <p><i class="fas fa-phone me-2"></i> +92 300 1234567</p>
+      </div>
+
+    </div>
+
+    <hr class="mb-4">
+
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8 text-center text-md-start">
+        <p>© 2026 Copyright: <strong class="text-warning">Bloggers.com</strong> - All Rights Reserved</p>
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-end">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./users.js" type="module"></script>
+</body>
+</html>

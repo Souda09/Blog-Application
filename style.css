@@ -115,6 +115,9 @@ body {
     z-index: 10;
 }
 
+body{
+    background-color: var(--bg-dark);
+}
 .createBlogBtn {
     padding: 15px 40px;
     font-weight: 600;
@@ -250,3 +253,125 @@ footer a:hover {
 
 
 
+.container {
+    max-width: 420px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Glassmorphism Effect for Form */
+form {
+    background: #1e1e1e; /* Dark Gray / Black */
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #333;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    border-color: #ffc107; /* Gold hover border */
+    transform: translateY(-5px);
+}
+
+.form-title {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.sub-title {
+    color: #888;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #bbb;
+    font-size: 0.85rem;
+    margin-left: 5px;
+}
+
+.form-control {
+    background: #262626;
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    padding: 12px 15px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    background: #2d2d2d;
+    border-color: #ffc107;
+    color: #fff;
+    box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.1);
+}
+
+.form-control::placeholder {
+    color: #555;
+}
+
+/* Gold Button */
+.btn-primary {
+    background: #ffc107;
+    border: none;
+    color: #000;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #e5ac00;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+}
+
+#login, p {
+    margin-top: 25px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+#login a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#login a:hover {
+    text-decoration: underline;
+}
+
+/* Input fields ki width aur padding control karne ke liye */
+.form-control {
+    background: #262626;
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    padding: 10px 15px; /* Padding thodi kam ki hai */
+    color: #fff;
+    width: 100%; /* Ye container ke andar hi rahega */
+    max-width: 100%; /* Taake form se bahar na nikle */
+    height: 45px; /* Ek standard height set ki hai */
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+/* Form container ki width ko control karein */
+form {
+    background: #1e1e1e;
+    padding: 30px 40px; /* Side padding barhai hai taake input chota dikhe */
+    border-radius: 24px;
+    border: 1px solid #333;
+    max-width: 400px; /* Pure form ki width yahan se set hogi */
+    margin: 0 auto; /* Center mein rakhne ke liye */
+}
